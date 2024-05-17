@@ -1,0 +1,54 @@
+# dune build -w
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Shared cache location: /home/azpect/.cache/dune/db
+# Workspace root: /home/azpect/Documents/Projects/OcamlMyCamel/hello
+# Auto-detected concurrency: 24
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /usr/bin/ocamlc.opt -config > /tmp/dune_a78422_output
+$ (cd _build/.sandbox/d6ff63ed2e5d8ceeef585ace71baae8a/default && .ppx/be888901223497a983cd75cc3e44f20a/ppx.exe --cookie 'library-name="hello"' -o lib/en.pp.ml --impl lib/en.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && /usr/bin/ocamldep.opt -modules -impl lib/en.pp.ml) > _build/default/lib/.hello.objs/hello__En.impl.d
+$ (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I lib/.hello.objs/byte -I /home/azpect/.opam/default/lib/ppx_show/runtime -intf-suffix .ml -no-alias-deps -opaque -open Hello -o lib/.hello.objs/byte/hello__En.cmo -c -impl lib/en.pp.ml)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I lib/.hello.objs/byte -I lib/.hello.objs/native -I /home/azpect/.opam/default/lib/ppx_show/runtime -intf-suffix .ml -no-alias-deps -opaque -open Hello -o lib/.hello.objs/native/hello__En.cmx -c -impl lib/en.pp.ml)
+$ (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/hello.cma lib/.hello.objs/byte/hello.cmo lib/.hello.objs/byte/hello__Es.cmo lib/.hello.objs/byte/hello__En.cmo)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/hello.cmxa lib/.hello.objs/native/hello.cmx lib/.hello.objs/native/hello__Es.cmx lib/.hello.objs/native/hello__En.cmx)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -shared -linkall -I lib -o lib/hello.cmxs lib/hello.cmxa)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o bin/main.exe /home/azpect/.opam/default/lib/ppx_show/runtime/ppx_show_runtime.cmxa lib/hello.cmxa /home/azpect/.opam/default/lib/sexplib0/sexplib0.cmxa /home/azpect/.opam/default/lib/parsexp/parsexp.cmxa /home/azpect/.opam/default/lib/sexplib/sexplib.cmxa bin/.main.eobjs/native/dune__exe__Main.cmx)
+$ (cd _build/.sandbox/551f86fee8fd0eeb719ae45f35302163/default && .ppx/be888901223497a983cd75cc3e44f20a/ppx.exe --cookie 'library-name="hello"' -o lib/en.pp.ml --impl lib/en.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && /usr/bin/ocamldep.opt -modules -impl lib/en.pp.ml) > _build/default/lib/.hello.objs/hello__En.impl.d
+$ (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I lib/.hello.objs/byte -I /home/azpect/.opam/default/lib/ppx_show/runtime -intf-suffix .ml -no-alias-deps -opaque -open Hello -o lib/.hello.objs/byte/hello__En.cmo -c -impl lib/en.pp.ml)
+> File "lib/en.ml", line 1, characters 4-18:
+> 1 | let string_list_pp = [%show: string list];;
+>         ^^^^^^^^^^^^^^
+> Error (warning 32 [unused-value-declaration]): unused value string_list_pp.
+[2]
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I lib/.hello.objs/byte -I lib/.hello.objs/native -I /home/azpect/.opam/default/lib/ppx_show/runtime -intf-suffix .ml -no-alias-deps -opaque -open Hello -o lib/.hello.objs/native/hello__En.cmx -c -impl lib/en.pp.ml)
+> File "lib/en.ml", line 1, characters 4-18:
+> 1 | let string_list_pp = [%show: string list];;
+>         ^^^^^^^^^^^^^^
+> Error (warning 32 [unused-value-declaration]): unused value string_list_pp.
+[2]
+$ (cd _build/.sandbox/26c93c83d530d64ecd2a40b49efbe7b5/default && .ppx/be888901223497a983cd75cc3e44f20a/ppx.exe --cookie 'library-name="hello"' -o lib/en.pp.ml --impl lib/en.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && /usr/bin/ocamldep.opt -modules -impl lib/en.pp.ml) > _build/default/lib/.hello.objs/hello__En.impl.d
+$ (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I lib/.hello.objs/byte -I /home/azpect/.opam/default/lib/ppx_show/runtime -intf-suffix .ml -no-alias-deps -opaque -open Hello -o lib/.hello.objs/byte/hello__En.cmo -c -impl lib/en.pp.ml)
+$ (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/hello.cma lib/.hello.objs/byte/hello.cmo lib/.hello.objs/byte/hello__Es.cmo lib/.hello.objs/byte/hello__En.cmo)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I lib/.hello.objs/byte -I lib/.hello.objs/native -I /home/azpect/.opam/default/lib/ppx_show/runtime -intf-suffix .ml -no-alias-deps -opaque -open Hello -o lib/.hello.objs/native/hello__En.cmx -c -impl lib/en.pp.ml)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/hello.cmxa lib/.hello.objs/native/hello.cmx lib/.hello.objs/native/hello__Es.cmx lib/.hello.objs/native/hello__En.cmx)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -shared -linkall -I lib -o lib/hello.cmxs lib/hello.cmxa)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o bin/main.exe /home/azpect/.opam/default/lib/ppx_show/runtime/ppx_show_runtime.cmxa lib/hello.cmxa /home/azpect/.opam/default/lib/sexplib0/sexplib0.cmxa /home/azpect/.opam/default/lib/parsexp/parsexp.cmxa /home/azpect/.opam/default/lib/sexplib/sexplib.cmxa bin/.main.eobjs/native/dune__exe__Main.cmx)
+$ (cd _build/.sandbox/ff6a12faf0ffc8aa28d761610ba23557/default && .ppx/be888901223497a983cd75cc3e44f20a/ppx.exe --cookie 'library-name="hello"' -o lib/en.pp.ml --impl lib/en.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && /usr/bin/ocamldep.opt -modules -impl lib/en.pp.ml) > _build/default/lib/.hello.objs/hello__En.impl.d
+$ (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I lib/.hello.objs/byte -I /home/azpect/.opam/default/lib/ppx_show/runtime -intf-suffix .ml -no-alias-deps -opaque -open Hello -o lib/.hello.objs/byte/hello__En.cmo -c -impl lib/en.pp.ml)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I lib/.hello.objs/byte -I lib/.hello.objs/native -I /home/azpect/.opam/default/lib/ppx_show/runtime -intf-suffix .ml -no-alias-deps -opaque -open Hello -o lib/.hello.objs/native/hello__En.cmx -c -impl lib/en.pp.ml)
+$ (cd _build/default && /usr/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/hello.cma lib/.hello.objs/byte/hello.cmo lib/.hello.objs/byte/hello__Es.cmo lib/.hello.objs/byte/hello__En.cmo)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/hello.cmxa lib/.hello.objs/native/hello.cmx lib/.hello.objs/native/hello__Es.cmx lib/.hello.objs/native/hello__En.cmx)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -shared -linkall -I lib -o lib/hello.cmxs lib/hello.cmxa)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o bin/main.exe /home/azpect/.opam/default/lib/ppx_show/runtime/ppx_show_runtime.cmxa lib/hello.cmxa /home/azpect/.opam/default/lib/sexplib0/sexplib0.cmxa /home/azpect/.opam/default/lib/parsexp/parsexp.cmxa /home/azpect/.opam/default/lib/sexplib/sexplib.cmxa bin/.main.eobjs/native/dune__exe__Main.cmx)
