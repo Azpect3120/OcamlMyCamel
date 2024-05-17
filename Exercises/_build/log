@@ -1,8 +1,8 @@
-# dune build -w
+# dune exec Exercises
 # OCAMLPARAM: unset
 # Shared cache: disabled
 # Shared cache location: /home/azpect/.cache/dune/db
-# Workspace root: /home/azpect/Documents/Projects/OcamlMyCamel/hello
+# Workspace root: /home/azpect/Documents/Projects/OcamlMyCamel/Exercises
 # Auto-detected concurrency: 12
 # Dune context:
 #  { name = "default"
@@ -13,4 +13,4 @@
 #  ; build_dir = In_build_dir "default"
 #  ; instrument_with = []
 #  }
-$ /usr/bin/ocamlc.opt -config > /tmp/dune_468744_output
+$ /usr/bin/ocamlc.opt -config > /tmp/dune_b21fac_output
