@@ -96,3 +96,47 @@ Printf.printf "Element at index 4 is %s\n" (
   | None -> "does not exist"
   | Some el -> el
 );;
+
+
+
+
+(* Length of a List  *)
+(* Find the number of elements of a list. *)
+let length lst = 
+  let rec loop n = function
+    | [] -> n
+    | _ :: tail -> loop (n + 1) tail
+  in
+  loop 0 lst
+;;
+
+(* Test with valid list *)
+(* Should print "Length: 5" *)
+let length_list_1 = [1; 2; 3; 4; 5];;
+Printf.printf "Length: %d\n" (length length_list_1);;
+
+(* Test with invalid list (empty) *)
+(* Should print "Length: 0" *)
+let length_list_2 = [];;
+Printf.printf "Length: %d\n" (length length_list_2);;
+
+
+
+
+(* Reverse a List  *)
+(* Reverse a list. *)
+let reverse lst = 
+  let rec prepend lst rev = 
+    match lst with
+    | [] -> rev
+    | head :: tail -> prepend tail (head :: rev)
+  in 
+  prepend lst []
+;;
+
+(* Test with valid list *)
+(* Should print "Reverse is: " *)
+let reverse_list = [1; 2; 3; 4; 5];;
+Printf.printf "Reverse is: [%s]\n" (
+  String.concat "; " (List.map string_of_int (reverse reverse_list))
+)
